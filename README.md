@@ -1,7 +1,23 @@
-# LendFlow
+<div align="center">
 
-**LLM-powered vehicle loan document decisioning pipeline**  
-Local-first · Privacy-preserving · Audit-ready · Human-in-the-loop
+# 🏦 LendFlow
+
+**LLM-powered vehicle loan document decisioning pipeline**
+
+[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-0.2%2B-FF6B6B?style=flat-square)](https://github.com/langchain-ai/langgraph)
+[![LM Studio](https://img.shields.io/badge/LM%20Studio-Local%20LLM-8B5CF6?style=flat-square)](https://lmstudio.ai/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+[![Routing Accuracy](https://img.shields.io/badge/Routing%20Accuracy-95%25%20(19%2F20)-brightgreen?style=flat-square)](eval_results.json)
+[![Avg Latency](https://img.shields.io/badge/Avg%20Latency-6.1s-blue?style=flat-square)](eval_results.json)
+[![P95 Latency](https://img.shields.io/badge/P95%20Latency-25.1s-blue?style=flat-square)](eval_results.json)
+[![PII](https://img.shields.io/badge/PII%20Egress-Zero-red?style=flat-square)](pipeline/nodes/pii.py)
+
+*Local-first · Privacy-preserving · Audit-ready · Human-in-the-loop*
+
+</div>
 
 ---
 
@@ -244,14 +260,35 @@ No code changes required. Three environment variable changes.
 
 ---
 
-## Evaluation targets
+## Evaluation results
 
-| Metric | Target | Method |
-|---|---|---|
-| PII recall | ≥ 95% | Regex scan pre/post redaction on 20 docs |
-| Field extraction F1 | ≥ 85% | vs. ground truth JSON |
-| Routing accuracy | ≥ 90% | vs. ground truth routing labels |
-| End-to-end latency | < 10s | Per application, LM Studio local |
+Benchmarked on 20 synthetic NBFC loan applications across 4 document types (bank statements, salary slips, KYC docs, vehicle inspection reports). Run `python scripts/run_eval.py` to reproduce.
+
+| Metric | Result | Target | Status |
+|---|---|---|---|
+| Routing accuracy | **95.0%** (19/20) | ≥ 90% | ✅ |
+| Field extraction F1 | **68.8%** (86/125) | ≥ 85% | ⚠️ |
+| Avg latency | **6.1s** / doc | < 10s | ✅ |
+| P95 latency | **25.1s** | — | — |
+| PII recall | **100%** | ≥ 95% | ✅ |
+| PII egress | **0 entities** | 0 | ✅ |
+
+> **Note on field extraction F1:** The 68.8% reflects the constraint of running a 4B parameter local model for data residency compliance. Critical routing fields (FOIR, `rc_encumbrance`, `inspection_passed`, `kyc_complete`, `employment_type`) are extracted reliably — routing accuracy remains 95%. A fine-tuned 1B domain-specific extractor or larger model would push F1 above 85%.
+
+## Demo UI
+
+```bash
+pip install streamlit
+python3 -m streamlit run app.py
+```
+
+A 3-tab Streamlit interface:
+
+| Tab | What it shows |
+|---|---|
+| **Run Pipeline** | Paste any document or load a sample → color-coded APPROVE / REJECT / ESCALATE banner, extracted fields table, policy flag badges, confidence bar |
+| **Audit Logs** | Browse all pipeline runs as a table, click any to view full JSON audit record |
+| **About** | Architecture overview and node descriptions |
 
 ---
 
