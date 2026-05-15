@@ -308,6 +308,12 @@ Data residency. Loan application data contains sensitive financial and identity 
 
 ---
 
+## Resources
+
+📄 **[Interview Defense Pack](docs/defense/LendFlow_Interview_Defense.pdf)** — 11-page deep-dive: architecture, design decisions, 24 Q&A pairs, eval methodology, scaling strategy.
+
+---
+
 ## Author
 
 **Sidharth Kriplani** · [linkedin.com/in/sidharth-kriplani](https://linkedin.com/in/sidharth-kriplani) · [github.com/SidharthKriplani](https://github.com/SidharthKriplani)
