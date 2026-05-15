@@ -4,6 +4,9 @@ Node 3: Structured Extraction
 LLM call (LM Studio / OpenAI) with document-type-specific Pydantic schema.
 Deterministic fallback for calculable fields (FOIR).
 Field-level confidence scoring via heuristic (null → low, present → medium/high).
+
+Cache: SHA-256(redacted_text + doc_type) → Redis (or in-memory fallback).
+Repeat submissions skip the LLM entirely.
 """
 import json
 import re
@@ -17,6 +20,7 @@ from pipeline.state import (
     LendFlowState, BankStatementFields, SalarySlipFields,
     KYCFields, VehicleReportFields, FieldConfidences, TokenLog,
 )
+from pipeline.cache import get_cached, set_cached
 
 # ── LLM client (OpenAI-compatible — works with LM Studio) ────────────────────
 _client = OpenAI(base_url=config.LLM_BASE_URL, api_key=config.LLM_API_KEY)
@@ -228,6 +232,19 @@ def extract_node(state: LendFlowState) -> dict:
         }
 
     schema_cls = _SCHEMAS[doc_type]
+
+    # ── Cache lookup ───────────────────────────────────────────────────────
+    cached = get_cached(redacted_text, doc_type)
+    if cached:
+        token_log = TokenLog(cache_hit=True)
+        token_log.update_totals()
+        return {
+            "extracted_fields":  cached["extracted_fields"],
+            "field_confidences": cached["field_confidences"],
+            "token_log":         token_log.model_dump(),
+            "cache_hit":         True,
+        }
+
     system_prompt = _SYSTEM_PROMPTS[doc_type]
     user_content = (
         f"Document type: {doc_type.replace('_', ' ')}\n"
@@ -268,8 +285,14 @@ def extract_node(state: LendFlowState) -> dict:
     )
     token_log.update_totals()
 
+    confidences_dict = confidences.model_dump()
+
+    # ── Cache write ────────────────────────────────────────────────────────
+    set_cached(redacted_text, doc_type, fields_dict, confidences_dict)
+
     return {
         "extracted_fields":  fields_dict,
-        "field_confidences": confidences.model_dump(),
+        "field_confidences": confidences_dict,
         "token_log":         token_log.model_dump(),
+        "cache_hit":         False,
     }
