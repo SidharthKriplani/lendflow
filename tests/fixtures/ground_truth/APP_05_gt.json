@@ -1,0 +1,23 @@
+{
+  "application_id": "APP_05",
+  "doc_type": "bank_statement",
+  "label": "RED_FLAG",
+  "extracted_fields": {
+    "estimated_monthly_income": 90000,
+    "emi_obligations": 18000,
+    "foir": 0.2,
+    "employment_type": "SALARIED",
+    "cash_flow_volatility": "HIGH",
+    "red_flags": [
+      "round-trip transactions detected",
+      "large cash withdrawal spike"
+    ],
+    "account_vintage_months": 36
+  },
+  "expected_routing": "REJECT",
+  "primary_reason": "Suspicious transaction patterns",
+  "critical_policy_rules": [
+    "FOIR_LIMIT",
+    "RED_FLAGS"
+  ]
+}

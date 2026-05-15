@@ -1,0 +1,34 @@
+BANK ACCOUNT STATEMENT
+Account Holder: Sunita Patel
+PAN: VZNDR3705G
+Mobile: +91 7465787133
+IFSC Code: BAOP0AZCCBL
+Account Number: 42273054800
+Branch: Mumbai Main Branch
+Statement Period: January 2026 - March 2026
+
+TRANSACTION SUMMARY
+Opening Balance (Jan 1):  ₹14,125
+Total Credits (3 months): ₹270,000
+Total Debits  (3 months): ₹270,000
+Closing Balance (Mar 31): ₹36,812
+
+Average Monthly Credits: ₹90,000
+Average Monthly Debits:  ₹86,245
+Estimated Monthly Income: ₹90,000
+Identified EMI Outflows:  ₹18,000
+FOIR (calculated): 20.00%
+Employment Type (inferred): SALARIED
+Account Vintage: 36 months
+
+SELECTED TRANSACTIONS
+Date        | Description                      | Debit     | Credit
+------------|----------------------------------|-----------|----------
+01 Jan 2026 | SALARY CREDIT - SALA  |           | ₹90,000
+05 Jan 2026 | EMI - HOME LOAN                  | ₹9,000  |
+10 Jan 2026 | EMI - PERSONAL LOAN              | ₹9,000  |
+15 Jan 2026 | CASH WITHDRAWAL - UNUSUAL        | ₹72,000  |
+20 Jan 2026 | TRANSFER IN + TRANSFER OUT SAME  | ₹45,000  | ₹45,000
+01 Feb 2026 | SALARY CREDIT - SALA  |           | ₹90,000
+
+RED FLAGS DETECTED: round-trip transactions detected; large cash withdrawal spike

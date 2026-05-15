@@ -1,0 +1,20 @@
+{
+  "application_id": "APP_20",
+  "doc_type": "vehicle_report",
+  "label": "VEH_CLEAR_HIGH",
+  "extracted_fields": {
+    "vehicle_make": "Tata",
+    "vehicle_model": "Nexon",
+    "manufacture_year": 2018,
+    "assessed_value": 1200000,
+    "condition_grade": "A",
+    "rc_encumbrance": false,
+    "odometer_km": 80000,
+    "inspection_passed": true
+  },
+  "expected_routing": "APPROVE",
+  "primary_reason": "Vehicle clear and valued",
+  "critical_policy_rules": [
+    "RC_ENCUMBRANCE"
+  ]
+}

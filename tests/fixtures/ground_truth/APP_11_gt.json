@@ -1,0 +1,17 @@
+{
+  "application_id": "APP_11",
+  "doc_type": "kyc",
+  "label": "KYC_COMPLETE",
+  "extracted_fields": {
+    "aadhaar_placeholder": "[AADHAAR_1]",
+    "pan_placeholder": "[IN_PAN_1]",
+    "address_present": true,
+    "kyc_complete": true,
+    "verification_status": "VERIFIED"
+  },
+  "expected_routing": "APPROVE",
+  "primary_reason": "KYC verified",
+  "critical_policy_rules": [
+    "KYC_COMPLETE"
+  ]
+}

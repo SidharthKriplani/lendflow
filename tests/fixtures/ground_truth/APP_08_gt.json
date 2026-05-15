@@ -1,0 +1,17 @@
+{
+  "application_id": "APP_08",
+  "doc_type": "salary_slip",
+  "label": "CONTRACT_UNCLEAR",
+  "extracted_fields": {
+    "gross_salary": 48000,
+    "net_salary": 37440,
+    "emi_deductions": 24000,
+    "employment_type": "CONTRACT",
+    "designation": "Consultant"
+  },
+  "expected_routing": "ESCALATE",
+  "primary_reason": "Manual verification needed",
+  "critical_policy_rules": [
+    "INCOME_VERIFIABLE"
+  ]
+}

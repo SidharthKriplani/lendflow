@@ -1,0 +1,33 @@
+SALARY SLIP — February 2026
+
+Employee Name: Manish Joshi
+Employee ID:   EMP47388
+Designation:   Junior Executive
+Department:    HR
+PAN:           MFKBJ7396G
+Bank Account:  ****8973
+
+Employer: Reliance Industries
+Employment Type: SALARIED
+
+EARNINGS
+Basic Pay:              ₹11,200
+House Rent Allowance:   ₹5,600
+Special Allowance:      ₹7,000
+Medical Allowance:      ₹1,400
+Transport Allowance:    ₹1,400
+Other Allowances:       ₹1,400
+━━━━━━━━━━━━━━━━━━━━━
+GROSS SALARY:           ₹28,000
+
+DEDUCTIONS
+Provident Fund (12%):   ₹3,360
+TDS:                    ₹1,400
+Professional Tax:       ₹200
+EMI Recovery:           ₹8,000
+━━━━━━━━━━━━━━━━━━━━━
+TOTAL DEDUCTIONS:       ₹12,760
+
+NET TAKE-HOME PAY:      ₹21,840
+
+Authorised Signatory: HR Department, Reliance Industries

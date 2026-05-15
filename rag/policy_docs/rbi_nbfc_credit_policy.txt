@@ -1,0 +1,182 @@
+RBI MASTER DIRECTIONS — NON-BANKING FINANCIAL COMPANIES (NBFC)
+CREDIT RISK MANAGEMENT AND LOAN ORIGINATION GUIDELINES
+(Synthetic Reference Document — For LendFlow RAG Training Only)
+
+CHAPTER 1: INCOME ASSESSMENT AND FIXED OBLIGATION TO INCOME RATIO (FOIR)
+
+1.1 Definition of FOIR
+The Fixed Obligation to Income Ratio (FOIR) is defined as the ratio of total fixed monthly obligations
+(including all existing EMIs, proposed loan EMI, rent, and any other contractual fixed payments) to
+the net monthly income of the borrower. FOIR is a primary credit underwriting parameter for all
+retail loan products including vehicle loans, personal loans, and home loans.
+
+1.2 FOIR Thresholds by Employment Category
+
+1.2.1 Salaried Borrowers
+For borrowers with confirmed salaried employment evidenced by salary slips from an employer and
+salary credits visible in bank statements, the maximum permissible FOIR shall not exceed 55% of
+net monthly income. Applications where FOIR exceeds 55% shall be classified as high-risk and
+routed for senior credit officer review or rejection as per individual NBFC policy.
+
+1.2.2 Self-Employed Borrowers
+For self-employed individuals including proprietors, partners, and professional practitioners,
+income estimation is based on bank statement analysis over a minimum 6-month period. The maximum
+permissible FOIR for self-employed borrowers shall not exceed 50% of estimated monthly income.
+Given higher income volatility for self-employed applicants, a more conservative FOIR ceiling
+is mandated to maintain portfolio quality.
+
+1.2.3 Contract and Gig Workers
+Borrowers categorized as contract workers, gig economy participants, or those with irregular
+income patterns shall be assessed with FOIR limits not exceeding 45% of average monthly income.
+Income averaging shall be computed over a minimum 6-month lookback period. Cash flow volatility
+above 30% month-over-month shall be flagged as a risk factor.
+
+1.3 Income Documentation Requirements
+Net monthly income must be verifiable through one or more of the following: (a) salary slips for
+minimum 3 consecutive months, (b) Form 16 or ITR for the preceding 2 financial years,
+(c) bank account statements showing consistent credit entries for minimum 6 months.
+Estimated income based on unverified declarations shall not be accepted as sole income proof.
+FOIR exceeding limits or income that cannot be verified through documentary evidence shall
+trigger an INCOME_VERIFIABLE policy flag requiring escalation.
+
+1.4 EMI Obligation Identification
+All existing EMIs visible in bank statements including home loan EMIs, vehicle loan EMIs, personal
+loan EMIs, credit card minimum payments, and any other fixed debit obligations must be identified
+and included in FOIR calculation. Undisclosed obligations identified through bureau checks shall
+be added to FOIR. Applications where EMI obligations are unclear or partially visible shall
+attract the INCOME_VERIFIABLE flag.
+
+CHAPTER 2: KYC REQUIREMENTS FOR VEHICLE LOAN ORIGINATION
+
+2.1 Mandatory KYC Documents
+All loan applicants must complete KYC as per the Prevention of Money Laundering Act (PMLA) and
+RBI KYC Master Directions. The following documents are mandatory for individual borrowers:
+
+2.1.1 Identity Proof (any one)
+Aadhaar Card (12-digit UID issued by UIDAI), Passport, Voter ID, Driving License, or PAN Card.
+For vehicle loan applicants, Driving License is the preferred identity document as it additionally
+validates driving competency for the financed asset.
+
+2.1.2 Address Proof (any one)
+Aadhaar Card (if not used as identity proof), Utility bills not older than 3 months, Bank account
+statement not older than 3 months, Registered rent agreement.
+
+2.1.3 PAN Card
+PAN is mandatory for all loan applications above Rs. 50,000. PAN must be linked to Aadhaar as per
+Income Tax Act provisions. Applications without a valid PAN shall be rejected or flagged for
+escalation pending PAN submission. Non-availability of PAN shall trigger the KYC_COMPLETE flag
+as an incomplete KYC condition.
+
+2.2 KYC Verification Standards
+Name on KYC documents must match across all submitted documents within acceptable variation
+(initials, middle name differences permissible). Significant name mismatches indicating different
+persons shall trigger a KYC_COMPLETE flag and require physical verification or notarized affidavit.
+Date of birth must be consistent across identity documents. Address must be current and verifiable.
+
+2.3 Digital KYC
+Video KYC (V-CKY) is permissible as per RBI circular RBI/2019-20/190. Aadhaar-based OTP
+authentication through authorized KUA entities is acceptable. Physical document submission
+remains mandatory for loan amounts above Rs. 5 lakh.
+
+CHAPTER 3: VEHICLE ASSESSMENT AND VALUATION GUIDELINES
+
+3.1 Vehicle Valuation Standards
+For used vehicle loan applications, vehicle valuation must be conducted by an approved valuer
+empaneled with the lending NBFC. The assessed value shall be determined by reference to:
+(a) age and make/model of the vehicle, (b) odometer reading and service history,
+(c) physical condition inspection, (d) prevailing market price for comparable vehicles.
+
+3.2 Vehicle Condition Grading
+NBFCs shall adopt a standardized vehicle condition grading system:
+Grade A (Excellent): Minor wear, full service history, no structural damage. LTV up to 80%.
+Grade B (Good): Moderate wear, mostly complete service history, no major damage. LTV up to 70%.
+Grade C (Average): Visible wear, incomplete service history, minor repairs noted. LTV up to 60%.
+Grade D (Poor): Significant wear, major repairs required, incomplete documentation. LTV up to 45%.
+Applications where vehicle condition is Grade D or the inspection has not been completed shall
+be escalated for senior review. Vehicles failing inspection shall be rejected outright.
+
+3.3 RC Encumbrance Check
+Registration Certificate (RC) must be verified for encumbrances through the Parivahan Vahaan
+portal or equivalent state RTO database. Any active hypothecation, charge, or lien on the
+vehicle's RC constitutes RC encumbrance. Applications with RC_ENCUMBRANCE detected shall be
+mandatorily rejected. Financing an encumbered vehicle without prior NOC from the existing
+financier is prohibited under securitization and lending regulations. RC encumbrance is a
+hard-block condition with no exceptions.
+
+3.4 Odometer and Mileage Considerations
+Excessive odometer readings relative to vehicle age shall be flagged. The general guideline is
+15,000–20,000 km per year as normal usage for private vehicles. Vehicles exceeding 25,000 km
+per year of age shall be considered high-usage and attract stricter valuation and LTV limits.
+
+CHAPTER 4: RED FLAGS AND SUSPICIOUS TRANSACTION INDICATORS
+
+4.1 Definition of Red Flags in Credit Applications
+The following patterns in bank statement analysis shall be treated as red flags requiring
+mandatory escalation or rejection:
+
+4.1.1 Round-Trip Transactions
+Credits immediately followed (within 2-3 business days) by equivalent debits of the same amount
+indicate potential circular fund flow. Round-trip transactions used to artificially inflate
+apparent income shall be identified and excluded from income computation. Applications where
+more than 20% of total credits are identified as round-trip transactions shall be flagged as
+RED_FLAGS and mandatorily rejected.
+
+4.1.2 Large Unexplained Cash Deposits
+Cash deposits exceeding Rs. 2 lakh in a single instance or Rs. 5 lakh in a month without
+corresponding business explanation constitute a red flag under PMLA obligations. Such deposits
+shall not be included in income calculations.
+
+4.1.3 Frequent Overdraft Utilization
+Bank accounts consistently operating close to or below zero balance, with frequent overdraft
+utilization, indicate poor financial health. Negative closing balance in more than 2 of the
+preceding 6 months shall be flagged.
+
+4.1.4 Salary Credit Irregularity
+For salaried applicants, salary credits must be consistent in amount (±10% tolerance for
+variable pay components) and timing (±5 working days). Irregular or declining salary credits
+shall trigger income verification escalation.
+
+4.2 Bureau-Level Red Flags
+Delinquency in existing credit obligations (DPD > 30 days in preceding 12 months), write-offs,
+settlements below contracted amount, and active NPA status with any lender shall constitute
+bureau-level red flags. Credit bureau verification is mandatory for all loan applications.
+
+CHAPTER 5: LOAN ROUTING AND DECISIONING FRAMEWORK
+
+5.1 Three-Tier Decision Framework
+All loan applications shall be classified into one of three decision categories:
+
+5.1.1 APPROVE
+Applications meeting all of the following criteria shall be approved within delegated authority:
+- FOIR within prescribed limits for the employment category
+- KYC complete with all mandatory documents verified
+- Vehicle condition Grade A or B, no RC encumbrance
+- No red flags identified in bank statement analysis
+- Income verifiable through documentary evidence
+- No bureau delinquencies in preceding 24 months
+
+5.1.2 ESCALATE (Human Review Required)
+Applications with one or more of the following shall be escalated for senior credit officer review:
+- FOIR between 5-10 percentage points above limit (soft breach)
+- KYC partially complete with minor deficiencies pending resolution
+- Vehicle condition Grade C or borderline B/C
+- Thin-file borrower (limited credit history, first-time borrower)
+- Employment type uncertain or irregular income patterns
+- Marginal red flags requiring manual assessment
+- Extraction confidence below threshold (system uncertainty)
+
+5.1.3 REJECT
+Applications with any of the following hard-block conditions shall be mandatorily rejected:
+- FOIR exceeding the applicable limit by more than 10 percentage points
+- RC encumbrance detected on vehicle
+- Red flags confirmed (circular transactions, fraudulent income inflation)
+- KYC fraud indicators or document tampering
+- Active NPA or recent write-off on bureau
+- Vehicle fails physical inspection
+
+5.2 Audit and Documentation Requirements
+All credit decisions must be accompanied by a documented audit trail including:
+the application data, decision rationale, policy rules triggered, officer identity,
+and timestamp. Audit records must be retained for a minimum of 8 years as per
+RBI record-keeping requirements. PII data in audit records must be stored with
+appropriate encryption and access controls.

@@ -1,0 +1,17 @@
+{
+  "application_id": "APP_09",
+  "doc_type": "salary_slip",
+  "label": "SALARIED_LOW",
+  "extracted_fields": {
+    "gross_salary": 28000,
+    "net_salary": 21840,
+    "emi_deductions": 8000,
+    "employment_type": "SALARIED",
+    "designation": "Junior Executive"
+  },
+  "expected_routing": "ESCALATE",
+  "primary_reason": "Manual verification needed",
+  "critical_policy_rules": [
+    "INCOME_VERIFIABLE"
+  ]
+}

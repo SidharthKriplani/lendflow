@@ -1,0 +1,20 @@
+{
+  "application_id": "APP_17",
+  "doc_type": "vehicle_report",
+  "label": "VEH_ENCUMBERED",
+  "extracted_fields": {
+    "vehicle_make": "Honda",
+    "vehicle_model": "City",
+    "manufacture_year": 2020,
+    "assessed_value": 620000,
+    "condition_grade": "B",
+    "rc_encumbrance": true,
+    "odometer_km": 48000,
+    "inspection_passed": true
+  },
+  "expected_routing": "REJECT",
+  "primary_reason": "RC encumbrance must be cleared",
+  "critical_policy_rules": [
+    "RC_ENCUMBRANCE"
+  ]
+}

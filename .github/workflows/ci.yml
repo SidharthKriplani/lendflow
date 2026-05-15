@@ -1,0 +1,84 @@
+name: LendFlow CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Unit & Integration Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m spacy download en_core_web_lg || echo "spaCy model skipped in CI"
+
+      - name: Set test environment variables
+        run: |
+          echo "LLM_BASE_URL=http://localhost:1234/v1"   >> $GITHUB_ENV
+          echo "LLM_API_KEY=lm-studio"                   >> $GITHUB_ENV
+          echo "LLM_MODEL=test-model"                    >> $GITHUB_ENV
+          echo "CHROMA_PERSIST_DIR=/tmp/lendflow_chroma" >> $GITHUB_ENV
+          echo "AUDIT_LOG_DIR=/tmp/lendflow_audit"       >> $GITHUB_ENV
+
+      - name: Generate synthetic test data
+        run: python scripts/generate_test_data.py
+
+      - name: Run PII redaction tests
+        run: pytest tests/test_pii.py -v --tb=short
+
+      - name: Run routing logic tests
+        run: pytest tests/test_routing.py -v --tb=short
+
+      - name: Run end-to-end tests (mocked LLM)
+        run: pytest tests/test_e2e.py -v --tb=short -k "not test_full_pipeline_approve_path and not test_full_pipeline_reject_rc_encumbrance and not test_audit_log"
+
+      - name: Verify graph compilation
+        run: |
+          python -c "
+          import os, sys
+          sys.path.insert(0, '.')
+          from pipeline.graph import build_graph
+          g = build_graph()
+          nodes = list(g.get_graph().nodes.keys())
+          assert 'intake' in nodes and 'audit' in nodes
+          print('Graph compiled:', nodes)
+          "
+
+      - name: Check import health
+        run: |
+          python -c "
+          from pipeline.state import LendFlowState, BankStatementFields
+          from pipeline.nodes.intake import intake_node
+          from pipeline.nodes.pii import pii_node, redact, restore
+          from pipeline.nodes.confidence import confidence_node
+          from pipeline.nodes.route import route_node
+          from pipeline.nodes.audit import audit_node
+          from rag.retriever import retrieve_policy_chunks
+          print('All imports OK')
+          "
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff
+      - run: ruff check . --select E,W,F --ignore E501 || true

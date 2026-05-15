@@ -1,0 +1,19 @@
+KYC DOCUMENT PACKAGE
+
+APPLICANT DETAILS
+Full Name:     Rakesh Tiwari
+Date of Birth: 1993-09-11
+Father's Name: Sunil Sharma
+
+IDENTITY PROOF
+Aadhaar Number: 5272 4346 6147
+PAN Card: NOT PROVIDED
+
+ADDRESS PROOF
+Flat 4B, Green Valley Apartments, Bengaluru - 560001
+
+KYC VERIFICATION STATUS: PENDING
+
+Documents submitted for manual review.
+
+Submission Date: Feb 2026

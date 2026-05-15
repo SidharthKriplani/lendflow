@@ -1,0 +1,187 @@
+LENDFLOW CREDIT OPERATIONS MANUAL
+INTERNAL POLICY DOCUMENT — VERSION 2.1
+VEHICLE LOAN UNDERWRITING STANDARDS
+
+SECTION 1: FOIR OPERATIONAL THRESHOLDS
+
+1.1 Approved FOIR Limits by Segment
+LendFlow operates the following FOIR thresholds for vehicle loan underwriting decisions:
+
+Salaried — Grade A Employer (MNC, PSU, large corporate): FOIR limit 55%
+Salaried — Grade B Employer (mid-size company, stable sector): FOIR limit 55%
+Salaried — Grade C Employer (small company, startup, informal sector): FOIR limit 50%
+Self-Employed Professional (doctor, CA, lawyer with verified income): FOIR limit 50%
+Self-Employed Business Owner (ITR-based income): FOIR limit 50%
+Contract / Gig Worker (irregular income): FOIR limit 45%
+Employment Type Unknown / Unverified: Escalate, do not approve
+
+When FOIR is within 3 percentage points of the applicable limit (soft breach zone),
+the application must be escalated for human review. The credit officer may approve
+at their discretion after reviewing all other parameters holistically.
+
+1.2 FOIR Calculation Methodology
+Monthly Income = Average of last 3 months salary credits (salaried) or
+                 Average of last 6 months net credits (self-employed)
+Fixed Obligations = All EMIs identified in bank statement + proposed EMI
+FOIR = Fixed Obligations / Monthly Income
+
+EMI identification protocol: any recurring debit of the same amount (±2%)
+on a consistent date (±3 days) each month for minimum 2 consecutive months
+shall be classified as an EMI obligation.
+
+Income averaging exclusions: large one-time credits (>3x average), suspected
+round-trip credits, inter-account transfers, and cash deposits without payslip
+correlation shall be excluded from income averaging.
+
+SECTION 2: KYC DECISION MATRIX
+
+2.1 KYC Completeness Definition
+KYC is considered COMPLETE when all of the following are verified:
+- Valid photo identity proof present and legible
+- Current address proof present and not older than 3 months
+- PAN Card present and matches identity proof name (within tolerance)
+- Date of birth consistent across all identity documents
+- Aadhaar number present (masked acceptable for processing, full required for disbursal)
+
+KYC is considered INCOMPLETE when any of the following apply:
+- PAN Card absent (KYC_COMPLETE flag triggered, mandatory escalation)
+- Name mismatch greater than 2 words difference between documents
+- Address proof older than 6 months
+- Aadhaar number absent with no alternative identity document
+- Documents appear altered or tampered with (hard reject)
+- Date of birth inconsistency of more than 1 year between documents
+
+2.2 KYC Verification Outcomes
+KYC_VERIFIED: All documents present, consistent, and verified → proceed to income check
+KYC_PENDING: Minor deficiencies (e.g., slightly old address proof) → escalate with note
+KYC_INCOMPLETE: Material deficiencies (no PAN, name mismatch) → escalate, cannot approve
+KYC_FRAUD: Document tampering suspected → hard reject, file SAR if required
+
+SECTION 3: VEHICLE ASSESSMENT STANDARDS
+
+3.1 Condition Grade Definitions and LTV Caps
+Grade A — Excellent condition:
+  Criteria: < 5 years old, odometer < 60,000 km, no accident history,
+            full service records, passes all inspection points
+  LTV Cap: 80% of assessed value
+  Routing: APPROVE subject to financial parameters
+
+Grade B — Good condition:
+  Criteria: 5-8 years old OR odometer 60,000–100,000 km,
+            minor wear acceptable, service history mostly complete,
+            no structural damage
+  LTV Cap: 70% of assessed value
+  Routing: APPROVE if borderline B consider financial parameters carefully
+
+Grade C — Average condition:
+  Criteria: 8-12 years old OR odometer 100,000–150,000 km,
+            visible wear, repairs noted, incomplete service history
+  LTV Cap: 60% of assessed value
+  Routing: ESCALATE — senior credit officer sign-off required
+
+Grade D — Poor condition:
+  Criteria: > 12 years old OR odometer > 150,000 km,
+            major repairs needed, structural concerns, failed inspection items
+  LTV Cap: 45% — only under exceptional circumstances
+  Routing: REJECT in most cases; exceptional approval requires VP credit sign-off
+
+Vehicle inspection not completed: ESCALATE immediately. Disbursement cannot
+proceed without a valid inspection report from an empaneled valuer.
+
+3.2 RC Encumbrance Policy
+RC Encumbrance = Hard Block. No exceptions. No escalation path. Mandatory rejection.
+An encumbered RC means the vehicle is already hypothecated to another financier.
+LendFlow cannot create a first charge on the asset. The application must be rejected
+and the applicant must be informed to obtain NOC from the existing financier before
+reapplying. This rule cannot be overridden by any credit officer. System must record
+RC_ENCUMBRANCE as a rejection reason in the audit log.
+
+3.3 Odometer Benchmarks
+Normal usage: 15,000 km/year
+High usage threshold: 25,000 km/year
+Any vehicle where (odometer_km / vehicle_age_years) > 25,000 shall be flagged for
+additional scrutiny and downgraded one condition level for LTV calculation purposes.
+
+SECTION 4: RED FLAG DEFINITIONS AND ACTIONS
+
+4.1 Hard-Block Red Flags (Mandatory Rejection)
+The following red flags are non-negotiable rejection triggers:
+- Round-trip transactions confirmed: credits immediately reversed within 48 hours,
+  pattern present in more than 2 instances in 3-month period
+- Income inflation scheme: salary credits from unknown entities not matching
+  declared employer, inconsistent with Form 16 or offer letter
+- Circular fund flow: money returned to originating account within 72 hours
+- Fraudulent documents: inconsistent metadata, suspected digital manipulation
+- Multiple applications with different income declarations
+
+4.2 Soft Red Flags (Escalation Required)
+The following patterns require escalation but do not mandate automatic rejection:
+- Cash deposit > Rs. 1 lakh in a single month without business explanation
+- Overdraft usage in 1 of last 6 months
+- Declining income trend (each of last 3 months lower than prior month)
+- Large irregular credits without clear source
+
+4.3 Income Exclusion Rules
+The following credits MUST be excluded from income calculation:
+- Round-trip amounts (credit followed by same-amount debit within 48 hours)
+- Cash deposits without documentary income source
+- One-time non-recurring credits (sale of asset, inheritance, gift)
+- Inter-bank self-transfers
+- Loan disbursement credits from other lenders
+
+SECTION 5: ROUTING DECISION REFERENCE GUIDE
+
+5.1 Quick Reference Matrix
+
+Condition                               | Decision
+----------------------------------------|----------
+FOIR within limit, KYC complete,        |
+vehicle Grade A/B, no red flags,        | APPROVE
+income verified                         |
+                                        |
+FOIR soft breach (≤ limit + 3%),        |
+OR KYC minor gap,                       | ESCALATE
+OR vehicle Grade C,                     |
+OR thin file, OR income borderline      |
+                                        |
+RC encumbrance detected                 | REJECT (hard block)
+Red flags confirmed (circular txns)     | REJECT (hard block)
+FOIR > limit + 10%                      | REJECT
+KYC fraud indicators                    | REJECT
+Vehicle Grade D / failed inspection     | REJECT
+                                        |
+Low system confidence (< 0.65)          | ESCALATE
+on any critical extraction field        | (HITL required)
+
+5.2 Reason Code Reference
+FOIR_EXCEEDED: Fixed obligation ratio exceeds permitted limit
+KYC_INCOMPLETE: Mandatory KYC documents missing or mismatched
+RC_ENCUMBRANCE: Vehicle RC has active hypothecation charge
+RED_FLAGS_DETECTED: Suspicious transaction patterns identified
+INCOME_UNVERIFIABLE: Income cannot be confirmed through documents
+VEHICLE_CONDITION_POOR: Vehicle grade D or inspection failed
+THIN_FILE: Insufficient credit history for standard scoring
+LOW_CONFIDENCE: System extraction confidence below threshold
+EMPLOYMENT_UNCLEAR: Employment type cannot be determined
+
+SECTION 6: AUDIT AND COMPLIANCE REQUIREMENTS
+
+6.1 Mandatory Audit Fields
+Every loan decision must capture: application_id, timestamp, doc_type,
+all extracted fields, confidence scores for each field, policy flags triggered
+(with rule name and detail), routing decision, reason codes, human_review_required
+flag, human_override if applicable, policy chunks cited with source reference,
+token usage log, pipeline_version, and processing time.
+
+6.2 PII Handling in Audit Logs
+Audit logs must NOT contain raw PII. PAN numbers, Aadhaar numbers, mobile numbers,
+bank account numbers, and IFSC codes must be stored as placeholder references only.
+The actual PII map must be stored separately in an encrypted store with restricted
+access. Audit logs retain only the pii_map_id pointer for traceability.
+
+6.3 Human Override Documentation
+When a credit officer overrides a system recommendation (approve an escalation,
+reject an approval, or change routing), the override must be documented with:
+officer_id, override_reason_text, decision_changed_from, decision_changed_to,
+and timestamp. Override rates above 15% signal potential system calibration issues
+and shall trigger monthly model performance review.

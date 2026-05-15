@@ -1,0 +1,33 @@
+SALARY SLIP — February 2026
+
+Employee Name: Manish Joshi
+Employee ID:   EMP75909
+Designation:   Data Analyst
+Department:    Analytics
+PAN:           HZPOT1936B
+Bank Account:  ****3579
+
+Employer: Infosys BPM
+Employment Type: SALARIED
+
+EARNINGS
+Basic Pay:              ₹22,000
+House Rent Allowance:   ₹11,000
+Special Allowance:      ₹13,750
+Medical Allowance:      ₹2,750
+Transport Allowance:    ₹2,750
+Other Allowances:       ₹2,750
+━━━━━━━━━━━━━━━━━━━━━
+GROSS SALARY:           ₹55,000
+
+DEDUCTIONS
+Provident Fund (12%):   ₹6,600
+TDS:                    ₹2,750
+Professional Tax:       ₹200
+No loan deductions.
+━━━━━━━━━━━━━━━━━━━━━
+TOTAL DEDUCTIONS:       ₹9,350
+
+NET TAKE-HOME PAY:      ₹42,900
+
+Authorised Signatory: HR Department, Infosys BPM

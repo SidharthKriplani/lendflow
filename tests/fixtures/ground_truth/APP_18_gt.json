@@ -1,0 +1,20 @@
+{
+  "application_id": "APP_18",
+  "doc_type": "vehicle_report",
+  "label": "VEH_POOR_GRADE",
+  "extracted_fields": {
+    "vehicle_make": "Hyundai",
+    "vehicle_model": "Creta",
+    "manufacture_year": 2019,
+    "assessed_value": 280000,
+    "condition_grade": "D",
+    "rc_encumbrance": false,
+    "odometer_km": 60000,
+    "inspection_passed": false
+  },
+  "expected_routing": "REJECT",
+  "primary_reason": "Inspection failed",
+  "critical_policy_rules": [
+    "RC_ENCUMBRANCE"
+  ]
+}

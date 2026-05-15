@@ -1,0 +1,33 @@
+SALARY SLIP — January 2026
+
+Employee Name: Anita Desai
+Employee ID:   EMP96374
+Designation:   Software Engineer
+Department:    HR
+PAN:           SWOGM7669E
+Bank Account:  ****6804
+
+Employer: Infosys BPM
+Employment Type: SALARIED
+
+EARNINGS
+Basic Pay:              ₹60,000
+House Rent Allowance:   ₹30,000
+Special Allowance:      ₹37,500
+Medical Allowance:      ₹7,500
+Transport Allowance:    ₹7,500
+Other Allowances:       ₹7,500
+━━━━━━━━━━━━━━━━━━━━━
+GROSS SALARY:           ₹150,000
+
+DEDUCTIONS
+Provident Fund (12%):   ₹18,000
+TDS:                    ₹7,500
+Professional Tax:       ₹200
+EMI Recovery:           ₹45,000
+━━━━━━━━━━━━━━━━━━━━━
+TOTAL DEDUCTIONS:       ₹70,500
+
+NET TAKE-HOME PAY:      ₹117,000
+
+Authorised Signatory: HR Department, Infosys BPM

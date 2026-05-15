@@ -1,0 +1,31 @@
+VEHICLE INSPECTION REPORT
+Inspection Agency: Profecto Vehicle Intelligence
+Report ID: PROF-2026-470858
+
+VEHICLE DETAILS
+Make & Model:   Tata Nexon
+Manufacture Year: 2018
+Odometer Reading: 80,000 km
+Chassis Number:   MHRS85146293
+Engine Number:    K12N64543049
+RC Number:        KA89 AB 3532
+
+TITLE STATUS
+Registration Certificate: CLEAR — No existing charge/hypothecation
+Hypothecation:  NONE
+
+INSPECTION RESULTS
+Overall Grade:         A
+Inspection Passed:     YES
+Engine Condition:      Good
+Body Condition:        Good
+Tyre Condition:        Good
+Interior Condition:    Good
+
+VALUATION
+Assessed Market Value: ₹1,200,000
+Recommended LTV (80%): ₹960,000
+Maximum Loan Amount:   ₹960,000
+
+Inspector: Rajan Mehta
+Date: Jan 2026

@@ -1,0 +1,34 @@
+BANK ACCOUNT STATEMENT
+Account Holder: Rahul Sharma
+PAN: SNZJO6925P
+Mobile: +91 8131647525
+IFSC Code: JRSR0CWTIQJ
+Account Number: 99873870754
+Branch: Mumbai Main Branch
+Statement Period: January 2026 - March 2026
+
+TRANSACTION SUMMARY
+Opening Balance (Jan 1):  ₹27,549
+Total Credits (3 months): ₹180,000
+Total Debits  (3 months): ₹180,000
+Closing Balance (Mar 31): ₹19,392
+
+Average Monthly Credits: ₹60,000
+Average Monthly Debits:  ₹52,392
+Estimated Monthly Income: ₹60,000
+Identified EMI Outflows:  ₹36,000
+FOIR (calculated): 60.00%
+Employment Type (inferred): SALARIED
+Account Vintage: 36 months
+
+SELECTED TRANSACTIONS
+Date        | Description                      | Debit     | Credit
+------------|----------------------------------|-----------|----------
+01 Jan 2026 | SALARY CREDIT - SALA  |           | ₹60,000
+05 Jan 2026 | EMI - HOME LOAN                  | ₹18,000  |
+10 Jan 2026 | EMI - PERSONAL LOAN              | ₹18,000  |
+15 Jan 2026 | UTILITY PAYMENT                  | ₹1,828   |
+20 Jan 2026 | GROCERY / DAILY EXPENSES         | ₹3,458   |
+01 Feb 2026 | SALARY CREDIT - SALA  |           | ₹60,000
+
+No anomalies detected.

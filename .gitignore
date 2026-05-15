@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+venv/
+env/
+
+# LendFlow runtime artifacts
+audit_logs/
+chroma_db/
+eval_results.json
+*.log
+
+# LM Studio / models
+*.gguf
+*.ggml
+*.safetensors
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

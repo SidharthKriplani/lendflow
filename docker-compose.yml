@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  lendflow:
+    build: .
+    container_name: lendflow-api
+    ports:
+      - "8000:8000"
+    environment:
+      # LM Studio (running on host machine)
+      - LLM_BASE_URL=http://host.docker.internal:1234/v1
+      - LLM_API_KEY=lm-studio
+      - LLM_MODEL=lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF
+
+      # To use OpenAI instead, comment above and uncomment below:
+      # - LLM_BASE_URL=https://api.openai.com/v1
+      # - LLM_API_KEY=${OPENAI_API_KEY}
+      # - LLM_MODEL=gpt-4o-mini
+
+      - CHROMA_PERSIST_DIR=/app/chroma_db
+      - AUDIT_LOG_DIR=/app/audit_logs
+      - CONFIDENCE_HIGH_THRESHOLD=0.85
+      - CONFIDENCE_LOW_THRESHOLD=0.65
+      - LANGCHAIN_TRACING_V2=false
+    volumes:
+      - lendflow_chroma:/app/chroma_db
+      - lendflow_audit:/app/audit_logs
+    restart: unless-stopped
+    extra_hosts:
+      # Allow container to reach LM Studio on host
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  lendflow_chroma:
+  lendflow_audit:

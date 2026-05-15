@@ -1,0 +1,19 @@
+KYC DOCUMENT PACKAGE
+
+APPLICANT DETAILS
+Full Name:     Pooja Shah
+Date of Birth: 1979-11-21
+Father's Name: Sunil Sharma
+
+IDENTITY PROOF
+Aadhaar Number: 5915 8491 6180
+PAN Card: YYAQO2638B
+
+ADDRESS PROOF
+Flat 4B, Green Valley Apartments, Bengaluru - 560001
+
+KYC VERIFICATION STATUS: MISMATCH
+NOTE: Name mismatch between Aadhaar and PAN records.
+
+
+Submission Date: Mar 2026

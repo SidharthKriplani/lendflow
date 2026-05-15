@@ -1,0 +1,34 @@
+BANK ACCOUNT STATEMENT
+Account Holder: Rahul Sharma
+PAN: AHFTR9935C
+Mobile: +91 6338908386
+IFSC Code: FPVA03ZMF8M
+Account Number: 61937947921
+Branch: Mumbai Main Branch
+Statement Period: January 2026 - March 2026
+
+TRANSACTION SUMMARY
+Opening Balance (Jan 1):  ₹8,169
+Total Credits (3 months): ₹255,000
+Total Debits  (3 months): ₹255,000
+Closing Balance (Mar 31): ₹28,526
+
+Average Monthly Credits: ₹85,000
+Average Monthly Debits:  ₹80,183
+Estimated Monthly Income: ₹85,000
+Identified EMI Outflows:  ₹22,000
+FOIR (calculated): 25.90%
+Employment Type (inferred): SALARIED
+Account Vintage: 36 months
+
+SELECTED TRANSACTIONS
+Date        | Description                      | Debit     | Credit
+------------|----------------------------------|-----------|----------
+01 Jan 2026 | SALARY CREDIT - SALA  |           | ₹85,000
+05 Jan 2026 | EMI - HOME LOAN                  | ₹11,000  |
+10 Jan 2026 | EMI - PERSONAL LOAN              | ₹11,000  |
+15 Jan 2026 | UTILITY PAYMENT                  | ₹2,972   |
+20 Jan 2026 | GROCERY / DAILY EXPENSES         | ₹5,166   |
+01 Feb 2026 | SALARY CREDIT - SALA  |           | ₹85,000
+
+No anomalies detected.

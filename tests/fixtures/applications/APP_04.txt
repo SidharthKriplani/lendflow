@@ -1,0 +1,34 @@
+BANK ACCOUNT STATEMENT
+Account Holder: Rahul Sharma
+PAN: RCXTT6573C
+Mobile: +91 6482814893
+IFSC Code: DTOU0TALA75
+Account Number: 41385534207
+Branch: Mumbai Main Branch
+Statement Period: January 2026 - March 2026
+
+TRANSACTION SUMMARY
+Opening Balance (Jan 1):  ₹6,898
+Total Credits (3 months): ₹120,000
+Total Debits  (3 months): ₹120,000
+Closing Balance (Mar 31): ₹20,785
+
+Average Monthly Credits: ₹40,000
+Average Monthly Debits:  ₹33,353
+Estimated Monthly Income: ₹40,000
+Identified EMI Outflows:  ₹8,000
+FOIR (calculated): 20.00%
+Employment Type (inferred): UNKNOWN
+Account Vintage: 36 months
+
+SELECTED TRANSACTIONS
+Date        | Description                      | Debit     | Credit
+------------|----------------------------------|-----------|----------
+01 Jan 2026 | SALARY CREDIT - UNKN  |           | ₹40,000
+05 Jan 2026 | EMI - HOME LOAN                  | ₹4,000  |
+10 Jan 2026 | EMI - PERSONAL LOAN              | ₹4,000  |
+15 Jan 2026 | UTILITY PAYMENT                  | ₹822   |
+20 Jan 2026 | GROCERY / DAILY EXPENSES         | ₹3,701   |
+01 Feb 2026 | SALARY CREDIT - UNKN  |           | ₹40,000
+
+No anomalies detected.

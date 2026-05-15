@@ -1,0 +1,17 @@
+{
+  "application_id": "APP_14",
+  "doc_type": "kyc",
+  "label": "KYC_NO_AADHAAR",
+  "extracted_fields": {
+    "aadhaar_placeholder": null,
+    "pan_placeholder": "[IN_PAN_1]",
+    "address_present": true,
+    "kyc_complete": false,
+    "verification_status": "PENDING"
+  },
+  "expected_routing": "ESCALATE",
+  "primary_reason": "KYC incomplete or mismatched",
+  "critical_policy_rules": [
+    "KYC_COMPLETE"
+  ]
+}

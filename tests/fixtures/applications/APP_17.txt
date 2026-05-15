@@ -1,0 +1,31 @@
+VEHICLE INSPECTION REPORT
+Inspection Agency: Profecto Vehicle Intelligence
+Report ID: PROF-2026-269430
+
+VEHICLE DETAILS
+Make & Model:   Honda City
+Manufacture Year: 2020
+Odometer Reading: 48,000 km
+Chassis Number:   MHRS69302158
+Engine Number:    K12N84045292
+RC Number:        KA64 AB 1158
+
+TITLE STATUS
+Registration Certificate: ENCUMBERED — Existing hypothecation found (Lender: XYZ Finance)
+Hypothecation:  ACTIVE — Must be cleared before new loan
+
+INSPECTION RESULTS
+Overall Grade:         B
+Inspection Passed:     YES
+Engine Condition:      Good
+Body Condition:        Minor dents
+Tyre Condition:        Good
+Interior Condition:    Good
+
+VALUATION
+Assessed Market Value: ₹620,000
+Recommended LTV (80%): ₹496,000
+Maximum Loan Amount:   ₹496,000
+
+Inspector: Rajan Mehta
+Date: Jan 2026

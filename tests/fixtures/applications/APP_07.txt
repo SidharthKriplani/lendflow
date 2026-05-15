@@ -1,0 +1,33 @@
+SALARY SLIP — January 2026
+
+Employee Name: Rohan Gupta
+Employee ID:   EMP42591
+Designation:   Operations Manager
+Department:    Operations
+PAN:           MSRZC7596S
+Bank Account:  ****4116
+
+Employer: Reliance Industries
+Employment Type: SALARIED
+
+EARNINGS
+Basic Pay:              ₹26,000
+House Rent Allowance:   ₹13,000
+Special Allowance:      ₹16,250
+Medical Allowance:      ₹3,250
+Transport Allowance:    ₹3,250
+Other Allowances:       ₹3,250
+━━━━━━━━━━━━━━━━━━━━━
+GROSS SALARY:           ₹65,000
+
+DEDUCTIONS
+Provident Fund (12%):   ₹7,800
+TDS:                    ₹3,250
+Professional Tax:       ₹200
+EMI Recovery:           ₹20,000
+━━━━━━━━━━━━━━━━━━━━━
+TOTAL DEDUCTIONS:       ₹31,050
+
+NET TAKE-HOME PAY:      ₹50,700
+
+Authorised Signatory: HR Department, Reliance Industries

@@ -1,0 +1,19 @@
+KYC DOCUMENT PACKAGE
+
+APPLICANT DETAILS
+Full Name:     Suresh Kumar
+Date of Birth: 1979-05-04
+Father's Name: Ramesh Kumar
+
+IDENTITY PROOF
+Aadhaar Number: 2753 3546 5462
+PAN Card: HFIRW9280M
+
+
+Address proof: NOT PROVIDED
+
+KYC VERIFICATION STATUS: PENDING
+
+Documents submitted for manual review.
+
+Submission Date: Jan 2026

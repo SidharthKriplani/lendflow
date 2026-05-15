@@ -1,0 +1,31 @@
+VEHICLE INSPECTION REPORT
+Inspection Agency: Profecto Vehicle Intelligence
+Report ID: PROF-2026-423232
+
+VEHICLE DETAILS
+Make & Model:   Toyota Innova
+Manufacture Year: 2018
+Odometer Reading: 42,000 km
+Chassis Number:   MHRS58942697
+Engine Number:    K12N15354599
+RC Number:        KA55 AB 4441
+
+TITLE STATUS
+Registration Certificate: CLEAR — No existing charge/hypothecation
+Hypothecation:  NONE
+
+INSPECTION RESULTS
+Overall Grade:         B
+Inspection Passed:     YES
+Engine Condition:      Good
+Body Condition:        Minor dents
+Tyre Condition:        Good
+Interior Condition:    Good
+
+VALUATION
+Assessed Market Value: ₹480,000
+Recommended LTV (80%): ₹384,000
+Maximum Loan Amount:   ₹384,000
+
+Inspector: Amit Jain
+Date: Jan 2026

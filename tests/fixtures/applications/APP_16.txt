@@ -1,0 +1,31 @@
+VEHICLE INSPECTION REPORT
+Inspection Agency: Profecto Vehicle Intelligence
+Report ID: PROF-2026-969634
+
+VEHICLE DETAILS
+Make & Model:   Maruti Swift Dzire
+Manufacture Year: 2021
+Odometer Reading: 35,000 km
+Chassis Number:   MHRS47135391
+Engine Number:    K12N15917225
+RC Number:        KA10 AB 6464
+
+TITLE STATUS
+Registration Certificate: CLEAR — No existing charge/hypothecation
+Hypothecation:  NONE
+
+INSPECTION RESULTS
+Overall Grade:         A
+Inspection Passed:     YES
+Engine Condition:      Good
+Body Condition:        Good
+Tyre Condition:        Good
+Interior Condition:    Good
+
+VALUATION
+Assessed Market Value: ₹850,000
+Recommended LTV (80%): ₹680,000
+Maximum Loan Amount:   ₹680,000
+
+Inspector: Rajan Mehta
+Date: Mar 2026

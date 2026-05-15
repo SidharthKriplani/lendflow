@@ -1,0 +1,33 @@
+SALARY SLIP — March 2026
+
+Employee Name: Anita Desai
+Employee ID:   EMP11934
+Designation:   Consultant
+Department:    Engineering
+PAN:           DEMWB2604B
+Bank Account:  ****4872
+
+Employer: Reliance Industries
+Employment Type: CONTRACT
+
+EARNINGS
+Basic Pay:              ₹19,200
+House Rent Allowance:   ₹9,600
+Special Allowance:      ₹12,000
+Medical Allowance:      ₹2,400
+Transport Allowance:    ₹2,400
+Other Allowances:       ₹2,400
+━━━━━━━━━━━━━━━━━━━━━
+GROSS SALARY:           ₹48,000
+
+DEDUCTIONS
+Provident Fund (12%):   ₹5,760
+TDS:                    ₹2,400
+Professional Tax:       ₹200
+EMI Recovery:           ₹24,000
+━━━━━━━━━━━━━━━━━━━━━
+TOTAL DEDUCTIONS:       ₹32,160
+
+NET TAKE-HOME PAY:      ₹37,440
+
+Authorised Signatory: HR Department, Reliance Industries

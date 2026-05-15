@@ -1,0 +1,20 @@
+{
+  "application_id": "APP_19",
+  "doc_type": "vehicle_report",
+  "label": "VEH_BORDERLINE_B",
+  "extracted_fields": {
+    "vehicle_make": "Toyota",
+    "vehicle_model": "Innova",
+    "manufacture_year": 2018,
+    "assessed_value": 480000,
+    "condition_grade": "B",
+    "rc_encumbrance": false,
+    "odometer_km": 42000,
+    "inspection_passed": true
+  },
+  "expected_routing": "ESCALATE",
+  "primary_reason": "Vehicle value borderline",
+  "critical_policy_rules": [
+    "RC_ENCUMBRANCE"
+  ]
+}

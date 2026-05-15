@@ -1,0 +1,17 @@
+{
+  "application_id": "APP_13",
+  "doc_type": "kyc",
+  "label": "KYC_MISMATCH",
+  "extracted_fields": {
+    "aadhaar_placeholder": "[AADHAAR_1]",
+    "pan_placeholder": "[IN_PAN_1]",
+    "address_present": true,
+    "kyc_complete": false,
+    "verification_status": "MISMATCH"
+  },
+  "expected_routing": "ESCALATE",
+  "primary_reason": "KYC incomplete or mismatched",
+  "critical_policy_rules": [
+    "KYC_COMPLETE"
+  ]
+}

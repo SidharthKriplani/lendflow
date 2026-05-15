@@ -1,0 +1,19 @@
+{
+  "application_id": "APP_03",
+  "doc_type": "bank_statement",
+  "label": "SELF_EMP_EDGE",
+  "extracted_fields": {
+    "estimated_monthly_income": 55000,
+    "emi_obligations": 26500,
+    "foir": 0.482,
+    "employment_type": "SELF_EMPLOYED",
+    "cash_flow_volatility": "LOW",
+    "red_flags": [],
+    "account_vintage_months": 36
+  },
+  "expected_routing": "ESCALATE",
+  "primary_reason": "FOIR 48.2% within 50% self-employed limit but income type uncertain \u2014 borderline escalate",
+  "critical_policy_rules": [
+    "FOIR_LIMIT"
+  ]
+}

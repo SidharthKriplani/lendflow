@@ -1,0 +1,31 @@
+VEHICLE INSPECTION REPORT
+Inspection Agency: Profecto Vehicle Intelligence
+Report ID: PROF-2026-672092
+
+VEHICLE DETAILS
+Make & Model:   Hyundai Creta
+Manufacture Year: 2019
+Odometer Reading: 60,000 km
+Chassis Number:   MHRS14835614
+Engine Number:    K12N59555330
+RC Number:        KA84 AB 3426
+
+TITLE STATUS
+Registration Certificate: CLEAR — No existing charge/hypothecation
+Hypothecation:  NONE
+
+INSPECTION RESULTS
+Overall Grade:         D
+Inspection Passed:     NO — Vehicle does not meet minimum standards
+Engine Condition:      Poor — Significant wear detected
+Body Condition:        Major damage
+Tyre Condition:        Needs replacement
+Interior Condition:    Poor
+
+VALUATION
+Assessed Market Value: ₹280,000
+Recommended LTV (80%): ₹224,000
+Maximum Loan Amount:   ₹224,000
+
+Inspector: Sonia Krishnan
+Date: Jan 2026

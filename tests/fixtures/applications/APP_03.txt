@@ -1,0 +1,34 @@
+BANK ACCOUNT STATEMENT
+Account Holder: Priya Mehta
+PAN: VUKBX6155F
+Mobile: +91 7423884969
+IFSC Code: KFZN0DBDW2P
+Account Number: 61812456976
+Branch: Mumbai Main Branch
+Statement Period: January 2026 - March 2026
+
+TRANSACTION SUMMARY
+Opening Balance (Jan 1):  ₹17,504
+Total Credits (3 months): ₹165,000
+Total Debits  (3 months): ₹165,000
+Closing Balance (Mar 31): ₹35,674
+
+Average Monthly Credits: ₹55,000
+Average Monthly Debits:  ₹48,666
+Estimated Monthly Income: ₹55,000
+Identified EMI Outflows:  ₹26,500
+FOIR (calculated): 48.20%
+Employment Type (inferred): SELF_EMPLOYED
+Account Vintage: 36 months
+
+SELECTED TRANSACTIONS
+Date        | Description                      | Debit     | Credit
+------------|----------------------------------|-----------|----------
+01 Jan 2026 | SALARY CREDIT - SELF  |           | ₹55,000
+05 Jan 2026 | EMI - HOME LOAN                  | ₹13,250  |
+10 Jan 2026 | EMI - PERSONAL LOAN              | ₹13,250  |
+15 Jan 2026 | UTILITY PAYMENT                  | ₹1,529   |
+20 Jan 2026 | GROCERY / DAILY EXPENSES         | ₹7,532   |
+01 Feb 2026 | SALARY CREDIT - SELF  |           | ₹55,000
+
+No anomalies detected.
