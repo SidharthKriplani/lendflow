@@ -9,9 +9,17 @@
 [![RAGAS](https://img.shields.io/badge/RAGAS-eval-8B5CF6?style=flat-square)](eval_results.json)
 [![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 
-> A production-grade, 7-node LangGraph pipeline that automates vehicle loan underwriting for Indian NBFCs — deterministic policy enforcement first, hybrid RAG policy lookup second, LLM only for final synthesis. PII never reaches the model. Every decision is audit-trailed.
+> An escalation-aware AI pipeline — built to answer: when should an automated decision stop and require human review? Demonstrated in financial underwriting for Indian NBFCs. Deterministic policy enforcement first, hybrid RAG policy lookup second, LLM only for final synthesis. PII never reaches the model. Every decision is audit-trailed.
 
 </div>
+
+---
+
+## Failure Mode Addressed
+
+**When should it stop or escalate?** Automated pipelines fail when they lack explicit rules for escalation — when confidence is low, when policy constraints are violated, when conflicting evidence can't be resolved without human judgment. LendFlow is built around making those rules explicit, deterministic, and auditable.
+
+The domain — vehicle loan underwriting — is the test environment. The failure mode is the thesis.
 
 ---
 
