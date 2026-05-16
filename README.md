@@ -176,16 +176,26 @@ Covers: all 7 nodes, deterministic-first rationale, hybrid RAG design, FOIR form
 
 ---
 
-## Part of Applied LLM Systems Portfolio
+## Part of Portfolio
 
-LendFlow is one project in a portfolio of production-grade LLM systems built around the principle that LLMs should synthesize, not decide.
+This project is part of a portfolio addressing AI system failure modes across 13 repos:
 
-| Project | Domain | Key Pattern |
-|---------|--------|-------------|
-| **LendFlow** | Vehicle loan underwriting | Deterministic-first, hybrid RAG, regulatory compliance |
-| [NexusSupply](https://github.com/SidharthKriplani/nexussupply) | Supply chain risk intelligence | Altman Z + XGBoost financial scoring, FinBERT sentiment, graph risk propagation |
-| [AgentReliabilityLab](https://github.com/SidharthKriplani/agentreliabilitylab) | LLM agent reliability research | Failure taxonomy, hallucination detection, reliability benchmarking |
-| PriorAI / Crucible | *(coming)* | Bayesian evidence synthesis, adversarial robustness |
+**Applied Systems (LangGraph)**
+- [**LendFlow**](https://github.com/SidharthKriplani/lendflow) — AI-powered loan underwriting · When to stop or escalate
+- [**AgentReliabilityLab**](https://github.com/SidharthKriplani/agentreliabilitylab) — Cyber threat triage agent · When to stop or escalate
+- [**NexusSupply**](https://github.com/SidharthKriplani/nexussupply) — Supplier risk intelligence · Conflicting signal fusion
+
+**Auditors & Tools**
+- [**InferenceLens**](https://github.com/SidharthKriplani/inferencelens) — Inference cost/quality tradeoff auditor
+- [**MetaSignal**](https://github.com/SidharthKriplani/metasignal_platform) — A/B experiment analysis platform
+- [**DevPulse**](https://github.com/SidharthKriplani/devpulse_platform) — Version-safe developer migration intelligence
+- [**RiskFrame**](https://github.com/SidharthKriplani/riskframe_platform) — Credit default risk decisioning
+- [**PulseRank**](https://github.com/SidharthKriplani/pulserank_platform) — Marketplace ranking with IPS debiasing
+- [**MetricLens**](https://github.com/SidharthKriplani/metriclens) — Metric movement decomposition
+- [**TrialCheck**](https://github.com/SidharthKriplani/trialcheck_v0) — A/B experiment readout auditor
+- [**FeatureLeakageLens**](https://github.com/SidharthKriplani/featureleakagelens_v0) — Pre-training leakage detection
+- [**GoldenSetAuditor**](https://github.com/SidharthKriplani/goldensetauditor_v0) — LLM/RAG evaluation dataset QA
+- [**DocIngestQA**](https://github.com/SidharthKriplani/docingestqa) — RAG document ingestion QA
 
 ---
 
