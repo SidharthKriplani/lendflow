@@ -1,0 +1,153 @@
+<svg viewBox="0 0 980 490" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="approvebg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#14532d"/>
+      <stop offset="100%" style="stop-color:#166534"/>
+    </linearGradient>
+    <linearGradient id="headerbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2d1f"/>
+      <stop offset="100%" style="stop-color:#0f1a2e"/>
+    </linearGradient>
+    <linearGradient id="card1bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card2bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b1f6b"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card3bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a2800"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card4bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a1a1a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="980" height="490" fill="url(#bg)"/>
+  <rect width="980" height="3" fill="#16a34a" opacity="0.8"/>
+
+  <!-- Header strip -->
+  <rect x="0" y="3" width="980" height="44" fill="#0d1f17" opacity="0.8"/>
+  <text x="490" y="22" text-anchor="middle" fill="white" font-size="15" font-weight="700" letter-spacing="0.5">LoanDecision — Sample Output</text>
+  <text x="490" y="38" text-anchor="middle" fill="#64748b" font-size="11">LendFlow Pipeline v1.0.0  ·  AI-Powered Vehicle Loan Underwriting</text>
+
+  <!-- Top banner (height 110) -->
+  <rect x="10" y="55" width="960" height="110" rx="10" fill="url(#headerbg)" stroke="#166534" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- APPROVE badge -->
+  <rect x="22" y="66" width="120" height="87" rx="8" fill="#14532d" stroke="#16a34a" stroke-width="2"/>
+  <text x="82" y="91" text-anchor="middle" fill="#86efac" font-size="9" font-weight="700" letter-spacing="2">DECISION</text>
+  <text x="82" y="116" text-anchor="middle" fill="#16a34a" font-size="22" font-weight="800">APPROVE</text>
+  <text x="82" y="143" text-anchor="middle" fill="#4ade80" font-size="9">Risk Band B</text>
+
+  <!-- Applicant info -->
+  <text x="160" y="86" fill="white" font-size="20" font-weight="700">Rahul Sharma</text>
+  <text x="160" y="104" fill="#94a3b8" font-size="12">APP-2024-001  ·  Maruti Swift  ·  ₹8.5L  ·  48 months</text>
+  <text x="160" y="121" fill="#64748b" font-size="11">Mumbai — Branch Application</text>
+  <rect x="160" y="130" width="110" height="20" rx="4" fill="#0f2d1f" stroke="#10b981" stroke-width="1"/>
+  <text x="215" y="144" text-anchor="middle" fill="#10b981" font-size="10" font-weight="600">All 6 Rules PASS</text>
+
+  <!-- FOIR display -->
+  <text x="540" y="78" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1.5">FOIR</text>
+  <text x="540" y="105" text-anchor="middle" fill="#4ade80" font-size="32" font-weight="800">0.43</text>
+  <text x="540" y="120" text-anchor="middle" fill="#86efac" font-size="10">Healthy — below 0.50 threshold</text>
+  <!-- FOIR bar -->
+  <rect x="490" y="126" width="100" height="8" rx="4" fill="#1e293b"/>
+  <rect x="490" y="126" width="43" height="8" rx="4" fill="#16a34a"/>
+  <!-- threshold marker -->
+  <line x1="540" y1="123" x2="540" y2="137" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="2,1"/>
+  <text x="540" y="148" text-anchor="middle" fill="#f59e0b" font-size="9">0.50</text>
+
+  <!-- Right meta -->
+  <text x="700" y="78" fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1">LOAN DETAILS</text>
+  <text x="700" y="96" fill="white" font-size="12" font-weight="600">EMI  <tspan fill="#4ade80" font-size="14">₹18,240/mo</tspan></text>
+  <text x="700" y="113" fill="#94a3b8" font-size="11">Rate  <tspan fill="white">11.5% p.a.</tspan></text>
+  <text x="700" y="129" fill="#94a3b8" font-size="11">Audit  <tspan fill="#60a5fa">AUDIT-7F3A</tspan></text>
+  <text x="700" y="145" fill="#94a3b8" font-size="11">Confidence  <tspan fill="white">0.87</tspan>  ·  Tokens <tspan fill="white">843</tspan></text>
+
+  <!-- 4 Signal cards (y=200, height=188) -->
+
+  <!-- Card 1: POLICY CHECKS (blue) -->
+  <rect x="10" y="185" width="228" height="188" rx="10" fill="url(#card1bg)" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="10" y="185" width="228" height="5" rx="3" fill="#3b82f6"/>
+  <text x="124" y="207" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="700" letter-spacing="1.5">POLICY CHECKS · DETERMINISTIC</text>
+  <line x1="20" y1="215" x2="228" y2="215" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="20" y="232" fill="#93c5fd" font-size="11">LTV Ratio: <tspan fill="#4ade80">68.5%</tspan>  ✓</text>
+  <text x="20" y="250" fill="#93c5fd" font-size="11">Applicant Age: <tspan fill="#4ade80">34</tspan>  ✓</text>
+  <text x="20" y="268" fill="#93c5fd" font-size="11">Income Floor: <tspan fill="#4ade80">₹25,000+</tspan>  ✓</text>
+  <text x="20" y="286" fill="#93c5fd" font-size="11">Pincode Check: <tspan fill="#4ade80">Clear</tspan>  ✓</text>
+  <text x="20" y="304" fill="#93c5fd" font-size="11">Vehicle Age: <tspan fill="#4ade80">New</tspan>  ✓</text>
+  <text x="20" y="322" fill="#93c5fd" font-size="11">Loan Tenor: <tspan fill="#4ade80">48mo</tspan>  ✓</text>
+  <rect x="20" y="335" width="208" height="28" rx="6" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+  <text x="124" y="353" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="700">All 6 Rules PASS</text>
+
+  <!-- Card 2: RAG LOOKUP (violet) -->
+  <rect x="250" y="185" width="228" height="188" rx="10" fill="url(#card2bg)" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="250" y="185" width="228" height="5" rx="3" fill="#8b5cf6"/>
+  <text x="364" y="207" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="700" letter-spacing="1.5">RAG LOOKUP</text>
+  <line x1="260" y1="215" x2="468" y2="215" stroke="#3b1f6b" stroke-width="1"/>
+  <text x="260" y="232" fill="#c4b5fd" font-size="11">Chunks retrieved: <tspan fill="white">8</tspan></text>
+  <text x="260" y="250" fill="#c4b5fd" font-size="11">Retrieval: <tspan fill="white">BM25 + ChromaDB</tspan></text>
+  <text x="260" y="268" fill="#c4b5fd" font-size="11">Reranker: <tspan fill="white">cross-encoder</tspan></text>
+  <text x="260" y="286" fill="#c4b5fd" font-size="11">Sources: <tspan fill="white">RBI · NBFC · NHB</tspan></text>
+  <text x="260" y="304" fill="#c4b5fd" font-size="11">Score threshold: <tspan fill="white">0.72</tspan></text>
+  <rect x="260" y="318" width="208" height="42" rx="6" fill="#2d1b69" stroke="#7c3aed" stroke-width="1"/>
+  <text x="260" y="333" fill="#a78bfa" font-size="9" font-weight="600" dx="10">TOP CITATION</text>
+  <text x="270" y="350" fill="#e9d5ff" font-size="10">"RBI Master Direction §2.3.1"</text>
+
+  <!-- Card 3: FOIR ENGINE (amber) -->
+  <rect x="490" y="185" width="228" height="188" rx="10" fill="url(#card3bg)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="490" y="185" width="228" height="5" rx="3" fill="#f59e0b"/>
+  <text x="604" y="207" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="700" letter-spacing="1.5">FOIR ENGINE</text>
+  <line x1="500" y1="215" x2="708" y2="215" stroke="#4a2800" stroke-width="1"/>
+  <text x="500" y="232" fill="#fcd34d" font-size="11">Gross Income: <tspan fill="white">₹62,000/mo</tspan></text>
+  <text x="500" y="250" fill="#fcd34d" font-size="11">Deductions: <tspan fill="white">₹12,000/mo</tspan></text>
+  <text x="500" y="268" fill="#fcd34d" font-size="11">Net Income: <tspan fill="white">₹50,000/mo</tspan></text>
+  <text x="500" y="286" fill="#fcd34d" font-size="11">Existing EMIs: <tspan fill="white">₹8,900</tspan></text>
+  <text x="500" y="304" fill="#fcd34d" font-size="11">Proposed EMI: <tspan fill="white">₹18,240</tspan></text>
+  <rect x="500" y="318" width="208" height="42" rx="6" fill="#451a03" stroke="#d97706" stroke-width="1"/>
+  <text x="604" y="335" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600">FOIR = 27,140 / 62,000</text>
+  <text x="604" y="352" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="800">= 0.43  ✓  APPROVE</text>
+
+  <!-- Card 4: RISK SCORE (red) -->
+  <rect x="730" y="185" width="240" height="188" rx="10" fill="url(#card4bg)" stroke="#ef4444" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="730" y="185" width="240" height="5" rx="3" fill="#ef4444"/>
+  <text x="850" y="207" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="700" letter-spacing="1.5">RISK SCORE</text>
+  <line x1="740" y1="215" x2="960" y2="215" stroke="#4a1a1a" stroke-width="1"/>
+  <text x="740" y="232" fill="#fca5a5" font-size="11">Bureau Score: <tspan fill="white">748</tspan></text>
+  <text x="740" y="250" fill="#fca5a5" font-size="11">Risk Band: <tspan fill="#4ade80" font-weight="700">B</tspan>  (Good)</text>
+  <text x="740" y="268" fill="#fca5a5" font-size="11">Employment: <tspan fill="white">Salaried PSU</tspan></text>
+  <text x="740" y="286" fill="#fca5a5" font-size="11">Vintage: <tspan fill="white">6 years</tspan></text>
+  <text x="740" y="304" fill="#fca5a5" font-size="11">Confidence: <tspan fill="white">0.87</tspan></text>
+  <rect x="740" y="318" width="220" height="42" rx="6" fill="#450a0a" stroke="#dc2626" stroke-width="1"/>
+  <text x="850" y="335" text-anchor="middle" fill="#f87171" font-size="10" font-weight="600">Latency: 1,240ms · Tokens: 843</text>
+  <text x="850" y="352" text-anchor="middle" fill="#fca5a5" font-size="10">Audit: <tspan fill="#60a5fa">AUDIT-7F3A</tspan></text>
+
+  <!-- Product recommendation box -->
+  <rect x="10" y="385" width="960" height="90" rx="10" fill="#0f172a" stroke="#166534" stroke-width="1.5"/>
+  <rect x="10" y="385" width="960" height="4" rx="2" fill="#16a34a"/>
+
+  <text x="30" y="407" fill="#86efac" font-size="11" font-weight="700" letter-spacing="1">APPROVED PRODUCT</text>
+  <text x="30" y="426" fill="white" font-size="14" font-weight="700">Standard Auto Loan  ·  11.5% p.a.  ·  48 months  ·  ₹18,240/mo EMI</text>
+  <text x="30" y="444" fill="#94a3b8" font-size="11">Policy citations: RBI Master Direction §2.3.1  ·  NBFC Circular §4.2  ·  NHB Guidelines §3.1</text>
+  <text x="30" y="461" fill="#64748b" font-size="11">Loan Amount: ₹8,50,000  ·  Vehicle: Maruti Swift (New)  ·  LTV: 68.5%  ·  Disbursement SLA: 2 days</text>
+
+  <rect x="750" y="397" width="200" height="62" rx="8" fill="#0d2d20" stroke="#10b981" stroke-width="1"/>
+  <text x="850" y="416" text-anchor="middle" fill="#10b981" font-size="10" font-weight="600" letter-spacing="1">AUDIT RECORD</text>
+  <text x="850" y="433" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="700">AUDIT-7F3A</text>
+  <text x="850" y="450" text-anchor="middle" fill="#64748b" font-size="10">Tokens: 843 · Latency: 1,240ms</text>
+
+  <!-- Footer -->
+  <text x="490" y="483" text-anchor="middle" fill="#334155" font-size="10">github.com/SidharthKriplani/lendflow  ·  LendFlow Pipeline v1.0.0</text>
+</svg>
